@@ -1,0 +1,660 @@
+:root{
+
+--background:#F8F5F1;
+--text:#40362F;
+--accent:#A56D4D;
+--white:white;
+
+}
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+background:var(--background);
+
+font-family:Inter,sans-serif;
+
+color:var(--text);
+
+}
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:25px 70px;
+
+z-index:999;
+
+background:rgba(255,255,255,.55);
+
+backdrop-filter:blur(12px);
+
+}
+
+.logo{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:34px;
+
+}
+
+.logo span{
+
+font-weight:600;
+
+}
+
+nav{
+
+display:flex;
+
+gap:40px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:var(--text);
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:var(--accent);
+
+}
+
+.hero{
+
+height:100vh;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.hero-image{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+.hero-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.28);
+
+}
+
+.hero-content{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+text-align:center;
+
+color:white;
+
+width:90%;
+
+max-width:700px;
+
+}
+
+.hero-content h1{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:90px;
+
+font-weight:500;
+
+margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+font-size:24px;
+
+line-height:1.8;
+
+margin-bottom:40px;
+
+}
+
+.button{
+
+display:inline-block;
+
+padding:18px 45px;
+
+background:var(--accent);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:40px;
+
+transition:.3s;
+
+}
+
+.button:hover{
+
+transform:translateY(-3px);
+
+}
+
+section{
+
+padding:110px 10%;
+
+}
+
+h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:56px;
+
+text-align:center;
+
+margin-bottom:20px;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+margin-bottom:60px;
+
+font-size:20px;
+
+color:#777;
+
+}
+
+#about{
+
+max-width:950px;
+
+margin:auto;
+
+text-align:center;
+
+line-height:2;
+
+font-size:20px;
+
+}
+
+#contact{
+
+text-align:center;
+
+}
+
+#contact a{
+
+color:var(--accent);
+
+font-size:22px;
+
+text-decoration:none;
+
+}
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+background:white;
+}
+/* =======================================
+   Maison LouLin Art Carousel
+======================================= */
+
+
+.carousel{
+
+    overflow:hidden;
+
+    margin-top:70px;
+
+    padding:40px 0;
+
+}
+
+
+.carousel-track{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:45px;
+
+    width:max-content;
+
+    animation:galleryMove 55s linear infinite;
+
+}
+
+
+.carousel:hover .carousel-track{
+
+    animation-play-state:paused;
+
+}
+
+
+
+.art-piece{
+
+    background:#fff;
+
+    padding:14px;
+
+    width:280px;
+
+    height:340px;
+
+    box-shadow:
+    0 20px 40px rgba(80,60,40,.15);
+
+    transition:.4s;
+
+}
+
+
+
+.art-piece img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+.art-piece:hover{
+
+    transform:
+    translateY(-15px)
+    scale(1.04);
+
+}
+
+
+
+.tall{
+
+    height:460px;
+
+}
+
+
+
+.wide{
+
+    width:420px;
+
+}
+
+
+
+.rotate-left{
+
+    transform:rotate(-2deg);
+
+}
+
+
+
+.rotate-right{
+
+    transform:rotate(2deg);
+
+}
+
+
+
+@keyframes galleryMove{
+
+
+from{
+
+transform:translateX(0);
+
+}
+
+
+to{
+
+transform:translateX(-50%);
+
+}
+
+
+}
+
+
+
+/* =======================================
+   Extra galerij sfeer
+======================================= */
+
+
+#gallery{
+
+    background:#F4EEE7;
+
+    overflow:hidden;
+
+}
+
+/* =======================================
+   Lightbox
+======================================= */
+
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.92);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:5000;
+
+}
+
+
+.lightbox img{
+
+    max-width:90%;
+
+    max-height:85%;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+
+}
+
+
+.close{
+
+    position:absolute;
+
+    top:30px;
+
+    right:40px;
+
+    color:white;
+
+    font-size:45px;
+
+    cursor:pointer;
+
+}
+
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:white;
+
+    font-size:60px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+
+.prev{
+
+    left:40px;
+
+}
+
+
+.next{
+
+    right:40px;
+
+}
+
+/* =======================================
+   Scroll animaties Maison LouLin
+======================================= */
+
+
+/* Startpositie verborgen */
+
+.fade-in{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+
+}
+
+
+/* Zichtbaar na scroll */
+
+.fade-in.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* Langzamere variant */
+
+.fade-slow{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+        opacity 1.5s ease,
+        transform 1.5s ease;
+
+}
+
+
+.fade-slow.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* Foto animatie */
+
+.image-reveal{
+
+    opacity:0;
+
+    transform:scale(.95);
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+
+}
+
+
+.image-reveal.visible{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+.contact-mail{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.contact-mail i{
+
+    font-size:24px;
+
+    color:var(--accent);
+
+}
+
+
+.contact-mail a{
+
+    color:var(--accent);
+
+    font-size:22px;
+
+    text-decoration:none;
+
+}
+
+/* =======================================
+   Signatuur Maison LouLin
+======================================= */
+
+
+.signature{
+
+    text-align:center;
+
+    margin-top:50px;
+
+}
+
+
+.signature img{
+
+    width:120px;
+
+    height:auto;
+
+    opacity:.9;
+
+    transition:.4s;
+
+}
+
+
+.signature img:hover{
+
+    transform:scale(1.08) rotate(-3deg);
+
+}
+
+
+.signature p{
+
+    margin-top:15px;
+
+    font-style:italic;
+
+    color:#777;
+
+}
+.story-subtitle{
+
+    margin-top:50px;
+    margin-bottom:25px;
+
+}
+
