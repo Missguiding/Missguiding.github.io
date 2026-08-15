@@ -657,4 +657,218 @@ transform:translateX(-50%);
     margin-bottom:25px;
 
 }
+/* =======================================
+   Tablet
+======================================= */
+
+@media (max-width:1024px){
+
+header{
+
+    padding:20px 35px;
+
+}
+
+.hero-content h1{
+
+    font-size:70px;
+
+}
+
+.hero-content p{
+
+    font-size:20px;
+
+}
+
+nav{
+
+    gap:20px;
+
+}
+
+.art-piece{
+
+    width:220px;
+    height:280px;
+
+}
+
+.tall{
+
+    height:360px;
+
+}
+
+.wide{
+
+    width:320px;
+
+}
+
+}
+ /* =======================================
+   Smartphone
+======================================= */
+
+@media (max-width:768px){
+
+header{
+
+    flex-direction:column;
+
+    padding:15px;
+
+    gap:15px;
+
+}
+
+.logo{
+
+    font-size:28px;
+
+}
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+.hero{
+
+    height:85vh;
+
+}
+
+.hero-content h1{
+
+    font-size:52px;
+
+}
+
+.hero-content p{
+
+    font-size:18px;
+
+}
+
+.button{
+
+    padding:15px 30px;
+
+}
+
+section{
+
+    padding:80px 7%;
+
+}
+
+h2{
+
+    font-size:42px;
+
+}
+
+.subtitle{
+
+    font-size:18px;
+
+}
+
+.art-piece{
+
+    width:180px;
+    height:230px;
+
+}
+
+.tall{
+
+    height:300px;
+
+}
+
+.wide{
+
+    width:260px;
+
+}
+
+}
+/* =======================================
+   Kleine smartphone
+======================================= */
+
+@media (max-width:480px){
+
+.hero-content h1{
+
+    font-size:42px;
+
+}
+
+.hero-content p{
+
+    font-size:16px;
+
+}
+
+.button{
+
+    width:100%;
+
+    max-width:260px;
+
+}
+
+.logo{
+
+    font-size:24px;
+
+}
+
+nav{
+
+    font-size:15px;
+
+}
+
+h2{
+
+    font-size:34px;
+
+}
+
+.subtitle{
+
+    font-size:16px;
+
+}
+
+.art-piece{
+
+    width:150px;
+    height:200px;
+
+}
+
+.tall{
+
+    height:260px;
+
+}
+
+.wide{
+
+    width:220px;
+
+}
+
+}
 
