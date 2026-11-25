@@ -32,7 +32,7 @@ const galleryPieces = {
 
 const statusLabels = {
     new: "Nieuw",
-    available: "Uw hart gewonnen?",
+    available: "Beschikbaar",
     gifted: "Iemand blij gemaakt!",
     ownuse: ""
 };
